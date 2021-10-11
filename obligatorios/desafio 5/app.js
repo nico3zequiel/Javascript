@@ -12,17 +12,20 @@ alert("Calculo de promedio trimestral")
 
 alert("Datos del alumno")
 
-function Alumnos(nombre, apellido, edad) {
-    this.nombre = nombre;
-    this.apellido = apellido;
-    this.edad = edad
+
+class Alumnos {
+    constructor(nombre, apellido, edad){    
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.edad = edad;
     }
+}
 
 const registrarAlumno = () => {
 
     let nombre = prompt("Ingrese su nombre")
     let apellido = prompt("Ingrese su apellido")
-    let edad = Number(prompt("Ingrese su edad"))
+    let edad = parseInt(prompt("Ingrese su edad"))
 
     const datos = new Alumnos (nombre, apellido, edad)
     console.log(datos);
