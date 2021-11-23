@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <title>Sistema de calculo de promedios</title>
+</head>
+<body>
+    <div class="container col-8 my-5 br-2 rounded">
+        <div class="row g-3">
+            
+            <div class="col-12">
+                <div class="card bg-info text-center">
+                    <h3>Notas exámenes</h3>
+                </div>
+                <form class="row g-3 needs-validation" novalidate>
+                    <div class="row">
+                        <div class="col-12 mt-3">
+                            <label class="form-label" for="firstname">Nombre del alumno</label>
+                            <input type="text" id="nombre" class="form-control" required>
+                            </div>
+                        
+                        <div class="col-4 mt-3">
+                            <label class="form-label" for="zip">Primer exámen </label>
+                            <input type="number" id="nota1" class="form-control" required>
+                            
+                        </div>
+                        <div class="col-4 mt-3">
+                            <label class="form-label" for="zip">Segundo exámen </label>
+                            <input type="number" id="nota2" class="form-control" required>
+                            
+                        </div>
+                        <div class="col-4 mt-3">
+                            <label class="form-label" for="zip">Tercer exámen </label>
+                            <input type="number" id="nota3" class="form-control" required>
+                            
+                        </div>                     
+                    
+                    
+                    </div>
+                    <hr class="mt-5">
+                    
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                        <button  class="btn btn-primary btn-block mb-4" onclick="promediarNotas();" id="show">Calcular Promedio</button>
+                    </div>                    
+                </form>
+            </div>
+            
+        </div>
+        <hr>
+        <div class="card bg-info text-center animacion">
+            <h3>Notas Finales</h3>
+        </div>
+        <div class="car-footer p-2 animacion">
+            
+            <table class="table table-striped table-bordered mt-3 " >
+                <thead class="text-center font-weight-bold">
+                    <tr class="bg-secondary text-white">
+                        <td>Nombre</td>
+                        <td>Nota 1</td>
+                        <td>Nota 2</td>
+                        <td>Nota 3</td>
+                        <td>Promedio</td>
+                        <td>Estado</td>
+                    </tr>
+                </thead>
+                <tbody id="addtabla">
+                    
+                </tbody>                  
+            </table>
+       </div>
+       <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+        <button  class="btn btn-primary btn-block mb-4" onclick="promediarNotas();" id="show">Nuestros alumnos</button>
+    </div>
+    </div>
+    <script src="./jquery.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>
